@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirthdayNoteTaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Xs-p1-ER4">
+                                <rect key="frame" x="37" y="81" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5DS-gy-VeM">
+                                <rect key="frame" x="37" y="123" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMP-Oq-aus">
+                                <rect key="frame" x="171" y="207" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBD-QB-yQk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFg-kK-AxP">
+                                <rect key="frame" x="37" y="250" width="329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLB-ng-OF3">
+                                <rect key="frame" x="37" y="301" width="329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="centerX" secondItem="MFg-kK-AxP" secondAttribute="centerX" id="4Zs-3N-X24"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="5G2-z9-bhb"/>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="top" secondItem="5DS-gy-VeM" secondAttribute="bottom" constant="50" id="7wF-uz-IKw"/>
+                            <constraint firstItem="TLB-ng-OF3" firstAttribute="top" secondItem="MFg-kK-AxP" secondAttribute="bottom" constant="30" id="CFN-ji-mPt"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="leading" secondItem="TLB-ng-OF3" secondAttribute="leading" id="DAG-f1-5G9"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="trailing" secondItem="TLB-ng-OF3" secondAttribute="trailing" id="DKt-UP-C5M"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="top" secondItem="3Xs-p1-ER4" secondAttribute="bottom" constant="8" id="HSF-4p-WsS"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="leading" secondItem="MFg-kK-AxP" secondAttribute="leading" id="RpQ-L2-KWC"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="W0z-Ew-q5L"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="5DS-gy-VeM" secondAttribute="leading" id="WX1-eB-4Md"/>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="Y3o-uV-Gj3"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="top" secondItem="FMP-Oq-aus" secondAttribute="bottom" constant="8" id="bGI-Vf-s9S"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="trailing" secondItem="5DS-gy-VeM" secondAttribute="trailing" id="etZ-X3-YMK"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="trailing" secondItem="MFg-kK-AxP" secondAttribute="trailing" id="rns-YW-gzI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="5DS-gy-VeM" id="b3i-se-WBP"/>
+                        <outlet property="birthdaylabel" destination="TLB-ng-OF3" id="5QT-vj-hWH"/>
+                        <outlet property="nameLabel" destination="MFg-kK-AxP" id="rmL-ZP-3nE"/>
+                        <outlet property="nameTextField" destination="3Xs-p1-ER4" id="HL9-9G-Ivl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-132.06106870229007" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
