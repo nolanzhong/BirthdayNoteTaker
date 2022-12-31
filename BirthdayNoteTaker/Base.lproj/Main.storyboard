@@ -26,14 +26,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMP-Oq-aus">
-                                <rect key="frame" x="171" y="207" width="61" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBD-QB-yQk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFg-kK-AxP">
                                 <rect key="frame" x="37" y="250" width="329" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -46,24 +38,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-zz-Pcl">
+                                <rect key="frame" x="292" y="207" width="74" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfl-yh-dAY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMP-Oq-aus">
+                                <rect key="frame" x="37" y="207" width="61" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBD-QB-yQk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FMP-Oq-aus" firstAttribute="centerX" secondItem="MFg-kK-AxP" secondAttribute="centerX" id="4Zs-3N-X24"/>
-                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="5G2-z9-bhb"/>
-                            <constraint firstItem="FMP-Oq-aus" firstAttribute="top" secondItem="5DS-gy-VeM" secondAttribute="bottom" constant="50" id="7wF-uz-IKw"/>
-                            <constraint firstItem="TLB-ng-OF3" firstAttribute="top" secondItem="MFg-kK-AxP" secondAttribute="bottom" constant="30" id="CFN-ji-mPt"/>
-                            <constraint firstItem="MFg-kK-AxP" firstAttribute="leading" secondItem="TLB-ng-OF3" secondAttribute="leading" id="DAG-f1-5G9"/>
-                            <constraint firstItem="MFg-kK-AxP" firstAttribute="trailing" secondItem="TLB-ng-OF3" secondAttribute="trailing" id="DKt-UP-C5M"/>
-                            <constraint firstItem="5DS-gy-VeM" firstAttribute="top" secondItem="3Xs-p1-ER4" secondAttribute="bottom" constant="8" id="HSF-4p-WsS"/>
-                            <constraint firstItem="5DS-gy-VeM" firstAttribute="leading" secondItem="MFg-kK-AxP" secondAttribute="leading" id="RpQ-L2-KWC"/>
-                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="W0z-Ew-q5L"/>
-                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="5DS-gy-VeM" secondAttribute="leading" id="WX1-eB-4Md"/>
-                            <constraint firstItem="FMP-Oq-aus" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="171" id="Y3o-uV-Gj3"/>
-                            <constraint firstItem="MFg-kK-AxP" firstAttribute="top" secondItem="FMP-Oq-aus" secondAttribute="bottom" constant="8" id="bGI-Vf-s9S"/>
-                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="trailing" secondItem="5DS-gy-VeM" secondAttribute="trailing" id="etZ-X3-YMK"/>
-                            <constraint firstItem="5DS-gy-VeM" firstAttribute="trailing" secondItem="MFg-kK-AxP" secondAttribute="trailing" id="rns-YW-gzI"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="leading" secondItem="FMP-Oq-aus" secondAttribute="leading" id="6yz-0g-f0c"/>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="top" secondItem="5DS-gy-VeM" secondAttribute="bottom" constant="50" id="8IY-tc-qXl"/>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="leading" secondItem="MFg-kK-AxP" secondAttribute="leading" id="ACc-op-6K9"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="leading" secondItem="TLB-ng-OF3" secondAttribute="leading" id="CJe-Vk-MGL"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="DiC-R9-b4O"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="JPH-2I-4Cj"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="trailing" secondItem="TLB-ng-OF3" secondAttribute="trailing" id="Ml4-Rg-zxc"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="top" secondItem="3Xs-p1-ER4" secondAttribute="bottom" constant="8" id="ReF-Wh-oPd"/>
+                            <constraint firstItem="5DS-gy-VeM" firstAttribute="trailing" secondItem="6iw-zz-Pcl" secondAttribute="trailing" id="VMd-qF-NqK"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="leading" secondItem="5DS-gy-VeM" secondAttribute="leading" id="VgN-bn-2AC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Xs-p1-ER4" secondAttribute="trailing" constant="27" id="XkF-p6-2xE"/>
+                            <constraint firstItem="3Xs-p1-ER4" firstAttribute="trailing" secondItem="5DS-gy-VeM" secondAttribute="trailing" id="XvM-nE-IqU"/>
+                            <constraint firstItem="FMP-Oq-aus" firstAttribute="baseline" secondItem="6iw-zz-Pcl" secondAttribute="baseline" id="b3T-aZ-uvz"/>
+                            <constraint firstItem="MFg-kK-AxP" firstAttribute="top" secondItem="FMP-Oq-aus" secondAttribute="bottom" constant="8" id="qZ9-u6-8Fb"/>
+                            <constraint firstItem="6iw-zz-Pcl" firstAttribute="trailing" secondItem="MFg-kK-AxP" secondAttribute="trailing" id="t8B-AX-uHf"/>
+                            <constraint firstItem="TLB-ng-OF3" firstAttribute="top" secondItem="MFg-kK-AxP" secondAttribute="bottom" constant="30" id="yNG-C9-ErF"/>
                         </constraints>
                     </view>
                     <connections>
